@@ -1,13 +1,11 @@
-# Ignore all directories except CAF framework files
+# Ignore everything in root
 /*
-!/README.md
-!/.claude/
-!/.gitignore
-!/r/
 
-# But re-include these patterns for the allowed directories
-.claude/**
-r/**
+# But don't ignore these
+!/.gitignore
+!/README.md
+!/.claude
+!/r
 
 # Ignore node_modules if any
 node_modules/
