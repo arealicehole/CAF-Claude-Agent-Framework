@@ -32,9 +32,17 @@ CAF provides two powerful agent systems:
     └── website-creator.md
 
 r/                     # Documentation & Research
-├── SUBAGENT-SYSTEM-GUIDE.md
-├── NEWSROOM-SYSTEM-GUIDE.md
-└── [platform]-content-research-2025-*.md (research reports)
+├── guides/            # System documentation
+│   ├── SUBAGENT-SYSTEM-GUIDE.md
+│   └── NEWSROOM-SYSTEM-GUIDE.md
+├── platform-research/ # 2025 platform intelligence
+│   ├── youtube-content-research-2025-*.md
+│   ├── instagram-content-research-2025-*.md
+│   ├── tiktok-content-research-2025-*.md
+│   ├── x-content-research-2025-*.md
+│   └── website-seo-research-2025-*.md
+└── research-archive/  # Historical research
+    └── *.md (older research reports)
 ```
 
 ---
@@ -88,18 +96,18 @@ Target audience: Millennial/Gen Z remote workers
 
 ### Quick Reference
 
-- **[Subagent System Guide](./r/SUBAGENT-SYSTEM-GUIDE.md)** - Complete architecture and design patterns
-- **[Newsroom System Guide](./r/NEWSROOM-SYSTEM-GUIDE.md)** - Content creation workflows and usage
+- **[Subagent System Guide](./r/guides/SUBAGENT-SYSTEM-GUIDE.md)** - Complete architecture and design patterns
+- **[Newsroom System Guide](./r/guides/NEWSROOM-SYSTEM-GUIDE.md)** - Content creation workflows and usage
 
 ### Research Reports (2025 Platform Intelligence)
 
 All agents updated with comprehensive research from 40-60+ sources per platform:
 
-- `youtube-content-research-2025-*.md` - Algorithm, CTR optimization, retention strategies
-- `instagram-content-research-2025-*.md` - Reels, hashtags, engagement tactics
-- `tiktok-content-research-2025-*.md` - FYP mechanics, hooks, completion rates
-- `x-content-research-2025-*.md` - Engagement hierarchy, Premium benefits, threads
-- `website-seo-research-2025-*.md` - Google algorithm, E-E-A-T, Core Web Vitals
+- `r/platform-research/youtube-content-research-2025-*.md` - Algorithm, CTR optimization, retention strategies
+- `r/platform-research/instagram-content-research-2025-*.md` - Reels, hashtags, engagement tactics
+- `r/platform-research/tiktok-content-research-2025-*.md` - FYP mechanics, hooks, completion rates
+- `r/platform-research/x-content-research-2025-*.md` - Engagement hierarchy, Premium benefits, threads
+- `r/platform-research/website-seo-research-2025-*.md` - Google algorithm, E-E-A-T, Core Web Vitals
 
 ---
 
@@ -276,10 +284,10 @@ Built on insights from:
 
 ## 🔗 Links
 
-- **Documentation:** See `/r` directory for complete guides
-- **Research Reports:** Platform-specific intelligence in `/r`
-- **Architecture Guide:** `r/SUBAGENT-SYSTEM-GUIDE.md`
-- **Usage Guide:** `r/NEWSROOM-SYSTEM-GUIDE.md`
+- **Documentation:** See `/r/guides` directory for complete guides
+- **Research Reports:** Platform-specific intelligence in `/r/platform-research`
+- **Architecture Guide:** `r/guides/SUBAGENT-SYSTEM-GUIDE.md`
+- **Usage Guide:** `r/guides/NEWSROOM-SYSTEM-GUIDE.md`
 
 ---
 
