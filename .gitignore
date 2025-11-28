@@ -20,3 +20,12 @@ Thumbs.db
 *.swp
 *.swo
 *~
+
+# Ignore config files with API keys (use .example templates)
+**/config/kie-config.json
+**/config/*.local.json
+**/*-config.json
+!**/*-config.example.json
+
+# Ignore brands folder (project-specific)
+/brands/

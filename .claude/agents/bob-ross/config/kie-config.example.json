@@ -1,0 +1,35 @@
+{
+  "kie_ai": {
+    "api_key": "YOUR_KIE_AI_API_KEY_HERE",
+    "base_url": "https://api.kie.ai/api/v1",
+    "model": "nano-banana-pro"
+  },
+  "defaults": {
+    "aspect_ratio": "1:1",
+    "resolution": "2K",
+    "output_format": "png"
+  },
+  "generation": {
+    "max_attempts": 3,
+    "poll_interval_seconds": 3,
+    "max_wait_seconds": 120
+  },
+  "review": {
+    "approval_threshold": {
+      "attempt_1": 80,
+      "attempt_2": 75,
+      "attempt_3": 70
+    },
+    "accept_best_minimum": 60
+  },
+  "output": {
+    "default_directory": "./output",
+    "create_manifest": true,
+    "naming_convention": "{project}_{image_id}.png"
+  },
+  "pricing": {
+    "1k_2k_per_image": 0.12,
+    "4k_per_image": 0.24,
+    "currency": "USD"
+  }
+}
