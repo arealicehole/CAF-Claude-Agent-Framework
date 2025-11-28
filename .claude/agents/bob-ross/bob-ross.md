@@ -15,7 +15,7 @@ model: sonnet
 **First, determine if this task has brand requirements:**
 
 1. **Brand specified?** Check if user/brief mentions a brand name
-2. **Brand guide exists?** Try `C:/Users/figon/zeebot/brands/{brand_name}/BRAND_GUIDE.md`
+2. **Brand guide exists?** Try `.brand/BRAND_GUIDE.md (project root)`
 
 ### SCENARIO A: Brand Specified + Guide Exists
 - Read the brand guide

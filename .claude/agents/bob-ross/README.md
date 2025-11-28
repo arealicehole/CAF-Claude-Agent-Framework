@@ -70,6 +70,24 @@ Autumn vibes, cozy atmosphere, feature lattes.
 
 ---
 
+## Brand Guide Setup
+
+Bob Ross looks for brand specs to ensure consistent styling.
+
+**Location:** `.brand/BRAND_GUIDE.md` (in your project root)
+
+**Template:** `templates/BRAND_GUIDE_TEMPLATE.md`
+
+**Minimum needed:**
+- Primary Color: #XXXXXX
+- Secondary Color: #XXXXXX
+- Style Keywords: modern, minimal, etc.
+- Watermark: @handle (optional)
+
+**No brand guide?** Provide specs in your request or use defaults.
+
+---
+
 ## Architecture
 
 ```
