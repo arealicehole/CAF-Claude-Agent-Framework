@@ -128,22 +128,49 @@ When you have hex codes, describe them in the prompt:
 
 ---
 
+## FORBIDDEN
+
+**CRITICAL: Set aspect_ratio in parameters based on platform/dimensions:**
+
+| Platform/Use | Dimensions | Aspect Ratio |
+|--------------|------------|--------------|
+| Instagram Feed | 1080x1080 | `1:1` |
+| Instagram Carousel | 1080x1080 | `1:1` |
+| Instagram Portrait | 1080x1350 | `4:5` |
+| TikTok | 1080x1920 | `9:16` |
+| Instagram Stories | 1080x1920 | `9:16` |
+| Reels | 1080x1920 | `9:16` |
+| YouTube Thumbnail | 1280x720 | `16:9` |
+| Website Banner | 1920x1080 | `16:9` |
+| Twitter/X Post | 1200x675 | `16:9` |
+
+**Parse from brief:**
+- If brief says "TikTok" or "Stories" or "Reels" -> use `9:16`
+- If brief says "Instagram post" or "carousel" -> use `1:1`
+- If brief says "YouTube thumbnail" or "banner" -> use `16:9`
+- If brief specifies dimensions like "1080x1920" -> derive ratio
+
+---
+
 ## PLATFORM-SPECIFIC ADJUSTMENTS
 
-### Instagram (1:1)
+### Instagram Feed (1:1)
 - Bold, eye-catching
 - Text large enough to read on mobile
 - Strong color contrast
+- **aspect_ratio: "1:1"**
 
-### Stories/TikTok (9:16)
+### Stories/TikTok/Reels (9:16)
 - Vertical composition
-- Content in center/upper area
-- Room for platform UI at top/bottom
+- Content in center/upper area (avoid top 10% and bottom 20% for UI)
+- Full-height impact
+- **aspect_ratio: "9:16"**
 
-### YouTube Thumbnails (16:9)
+### YouTube Thumbnails/Banners (16:9)
 - High contrast, readable at small sizes
 - Face/expression if applicable
 - Bold text elements
+- **aspect_ratio: "16:9"**
 
 ---
 

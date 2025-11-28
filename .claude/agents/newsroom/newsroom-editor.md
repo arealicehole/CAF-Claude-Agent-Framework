@@ -126,6 +126,17 @@ Collect outputs as they complete.
 
 ### Phase 4: Design Briefs for Images
 
+**CRITICAL: Always include explicit aspect ratio!**
+
+| Platform | Dimensions | Aspect Ratio |
+|----------|------------|--------------|
+| Instagram Feed | 1080x1080 | 1:1 |
+| Instagram Stories | 1080x1920 | 9:16 |
+| TikTok | 1080x1920 | 9:16 |
+| Reels | 1080x1920 | 9:16 |
+| YouTube Thumbnail | 1280x720 | 16:9 |
+| Website Banner | 1920x1080 | 16:9 |
+
 When creating design briefs for bob-ross or image generation:
 
 **With brand guide:**
@@ -133,8 +144,9 @@ When creating design briefs for bob-ross or image generation:
 ## Image Design Brief
 
 **Brand:** [Name]
-**Platform:** [Instagram/TikTok/etc.]
-**Dimensions:** [1080x1080/1080x1920/etc.]
+**Platform:** [Instagram Feed/TikTok/etc.]
+**Dimensions:** 1080x1920
+**Aspect Ratio:** 9:16
 
 ### Brand Specs (from brand guide)
 - **Primary Color:** #XXXXXX (color name)
@@ -154,8 +166,9 @@ When creating design briefs for bob-ross or image generation:
 ```markdown
 ## Image Design Brief
 
-**Platform:** [Instagram/TikTok/etc.]
-**Dimensions:** [1080x1080/1080x1920/etc.]
+**Platform:** [Instagram Feed/TikTok/etc.]
+**Dimensions:** 1080x1920
+**Aspect Ratio:** 9:16
 
 ### Visual Specs (from request/defaults)
 - **Style:** Modern, clean, professional
