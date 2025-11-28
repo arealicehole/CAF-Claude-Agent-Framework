@@ -126,16 +126,30 @@ Collect outputs as they complete.
 
 ### Phase 4: Design Briefs for Images
 
-**CRITICAL: Always include explicit aspect ratio!**
+**CRITICAL: Always include explicit aspect ratio in the brief!**
 
-| Platform | Dimensions | Aspect Ratio |
-|----------|------------|--------------|
-| Instagram Feed | 1080x1080 | 1:1 |
-| Instagram Stories | 1080x1920 | 9:16 |
-| TikTok | 1080x1920 | 9:16 |
-| Reels | 1080x1920 | 9:16 |
-| YouTube Thumbnail | 1280x720 | 16:9 |
-| Website Banner | 1920x1080 | 16:9 |
+**Available Aspect Ratios by Platform:**
+
+| Platform | Options | Notes |
+|----------|---------|-------|
+| **Instagram Feed** | 1:1, 4:5, 3:4, 16:9 | 4:5 gets most screen real estate |
+| **Instagram Carousel** | 1:1, 4:5 | Keep consistent across slides |
+| **Instagram Stories** | 9:16 | Full vertical |
+| **Reels** | 9:16 | Full vertical |
+| **TikTok** | 9:16 | Full vertical |
+| **YouTube Thumbnail** | 16:9 | Standard |
+| **YouTube Shorts** | 9:16 | Vertical |
+| **X/Twitter** | 16:9, 1:1 | 16:9 most common |
+| **Website Banner** | 16:9, 21:9 | Depends on design |
+
+**Common Dimensions:**
+- 1:1 = 1080x1080
+- 4:5 = 1080x1350 (Instagram portrait - more feed real estate)
+- 3:4 = 1080x1440 (Instagram feed option)
+- 9:16 = 1080x1920 (vertical/stories)
+- 16:9 = 1920x1080 or 1280x720
+
+**YOU MUST specify the exact aspect ratio in every design brief. Do not assume.**
 
 When creating design briefs for bob-ross or image generation:
 

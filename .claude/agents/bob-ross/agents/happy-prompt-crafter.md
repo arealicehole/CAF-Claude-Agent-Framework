@@ -128,49 +128,22 @@ When you have hex codes, describe them in the prompt:
 
 ---
 
-## FORBIDDEN
+## ASPECT RATIO
 
-**CRITICAL: Set aspect_ratio in parameters based on platform/dimensions:**
+**Use exactly what the design brief specifies.** Do not assume - the brief must be explicit.
 
-| Platform/Use | Dimensions | Aspect Ratio |
-|--------------|------------|--------------|
-| Instagram Feed | 1080x1080 | `1:1` |
-| Instagram Carousel | 1080x1080 | `1:1` |
-| Instagram Portrait | 1080x1350 | `4:5` |
-| TikTok | 1080x1920 | `9:16` |
-| Instagram Stories | 1080x1920 | `9:16` |
-| Reels | 1080x1920 | `9:16` |
-| YouTube Thumbnail | 1280x720 | `16:9` |
-| Website Banner | 1920x1080 | `16:9` |
-| Twitter/X Post | 1200x675 | `16:9` |
+Valid options: `1:1`, `4:5`, `3:4`, `9:16`, `16:9`, `21:9`
 
-**Parse from brief:**
-- If brief says "TikTok" or "Stories" or "Reels" -> use `9:16`
-- If brief says "Instagram post" or "carousel" -> use `1:1`
-- If brief says "YouTube thumbnail" or "banner" -> use `16:9`
-- If brief specifies dimensions like "1080x1920" -> derive ratio
+If brief does not specify, default to `1:1` but note it in output.
 
 ---
 
-## PLATFORM-SPECIFIC ADJUSTMENTS
+## COMPOSITION TIPS BY FORMAT
 
-### Instagram Feed (1:1)
-- Bold, eye-catching
-- Text large enough to read on mobile
-- Strong color contrast
-- **aspect_ratio: "1:1"**
-
-### Stories/TikTok/Reels (9:16)
-- Vertical composition
-- Content in center/upper area (avoid top 10% and bottom 20% for UI)
-- Full-height impact
-- **aspect_ratio: "9:16"**
-
-### YouTube Thumbnails/Banners (16:9)
-- High contrast, readable at small sizes
-- Face/expression if applicable
-- Bold text elements
-- **aspect_ratio: "16:9"**
+**Square (1:1):** Centered, balanced
+**Portrait (4:5, 3:4):** More vertical space, good for text + image
+**Vertical (9:16):** Content in center/upper area, avoid top/bottom 15% for UI
+**Landscape (16:9):** Wide, good for thumbnails/banners
 
 ---
 
