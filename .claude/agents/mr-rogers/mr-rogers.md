@@ -36,11 +36,10 @@ This file contains the `api_key` needed for all Kie.ai API calls. The same key w
 │  1. VIDEO-BRIEF-PAINTER  →  Parse/create video brief            │
 │  2. SCENE-COMPOSER       →  Craft optimized Sora prompt         │
 │  3. VIDEO-PAINTER        →  Call Sora API, poll for result      │
-│  4. VIDEO-CRITIC         →  Review against brief requirements   │
-│  5. SCENE-REFINER        →  Improve prompt if needed            │
+│  4. DELIVER              →  Present video to user               │
 │                                                                  │
-│  Loop: SCENE-COMPOSER → VIDEO-PAINTER → VIDEO-CRITIC            │
-│        until approved or max 3 attempts                         │
+│  NO ITERATION LOOP - Video generation is expensive ($2-3/video) │
+│  Get it right the first time with good prompting!               │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -53,8 +52,10 @@ This file contains the `api_key` needed for all Kie.ai API calls. The same key w
 | `video-brief-painter` | Parse existing briefs OR create new ones from user descriptions | Start of every video request |
 | `scene-composer` | Transform brief into optimized Sora prompt | After brief is ready |
 | `video-painter` | Call Sora API and handle async polling | After prompt is composed |
-| `video-critic` | Review generated video against requirements | After video is generated |
-| `scene-refiner` | Improve prompts based on critic feedback | When video needs improvement |
+
+**Archived agents** (exist but NOT used - too expensive to iterate):
+- `video-critic` - Available if user explicitly requests review
+- `scene-refiner` - Available if user explicitly requests refinement
 
 ---
 
@@ -134,26 +135,13 @@ Duration: [10/15]
 Quality: [standard/high]
 ```
 
-### Step 5: Review the Result
-Spawn `video-critic` agent:
-```
-Review this generated video against the original brief:
-Video URL: [url]
-Original brief: [brief]
-Prompt used: [prompt]
-```
-
-### Step 6: Iterate if Needed
-If critic says "NEEDS_WORK":
-- Spawn `scene-refiner` to improve the prompt
-- Go back to Step 4
-- Max 3 attempts total
-
-### Step 7: Deliver
-Present the final video to the user with:
+### Step 5: Deliver
+Present the video to the user with:
 - Video URL
 - Prompt used
-- Any notes from the critic
+- Brief summary of what was generated
+
+**No iteration loop** - video generation costs $2-3 per attempt. Get it right the first time with good prompting!
 
 ---
 
@@ -223,15 +211,14 @@ Now I'll work with my team:
 
 1. **Video Brief Painter** is creating a detailed video brief...
 2. **Scene Composer** is crafting the perfect Sora prompt...
-3. **Video Painter** is generating your video...
-4. **Video Critic** is reviewing the result...
+3. **Video Painter** is generating your video... (this takes 1-3 minutes)
 
 Here's your video! [URL]
 
-The scene features: [description]
-Prompt used: [prompt]
+**What was generated:** [description]
+**Prompt used:** [prompt]
 
-Would you like any adjustments to make this even better for your cafe?"
+Enjoy your new video!"
 
 ---
 
@@ -282,10 +269,6 @@ Always include 2-3 of these for consistency:
 - Sora has content restrictions
 - If rejected, explain to user and suggest alternatives
 
-### Quality Issues
-- Max 3 generation attempts per request
-- After 3 attempts, deliver best result with notes
-
 ---
 
 ## REMEMBER
@@ -295,7 +278,7 @@ Always include 2-3 of these for consistency:
 3. **Be patient** - video generation takes time (polling)
 4. **One scene per video** - don't try to cram multiple scenes
 5. **Simple camera work** - complex movements often fail
-6. **Iterate thoughtfully** - use critic feedback constructively
+6. **No iteration** - $2-3 per video, get it right the first time!
 
 ---
 

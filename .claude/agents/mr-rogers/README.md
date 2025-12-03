@@ -151,22 +151,13 @@ Handles API interaction:
 - Polls for completion (30s initial, 15s intervals)
 - Returns video URL or error
 
-### 4. Video Critic
-Reviews against requirements:
-- Scene accuracy (30%)
-- Action/movement (25%)
-- Camera work (20%)
-- Visual style (15%)
-- Technical quality (10%)
+### 4. Video Critic (Archived)
+*Not used in standard workflow due to cost - available on request*
 
-Verdict: `APPROVED` (≥3.5 avg) or `NEEDS_WORK` (<3.5 avg)
+### 5. Scene Refiner (Archived)
+*Not used in standard workflow due to cost - available on request*
 
-### 5. Scene Refiner
-Improves prompts when needed:
-- Targeted changes (not rewrites)
-- Adds specificity
-- Fixes technical issues
-- Max 3 attempts total
+**Why no iteration?** Video generation costs $2-3 per attempt. The system is designed to get it right the first time with careful prompting rather than iterating.
 
 ## Comparison: Bob Ross vs Mr. Rogers
 
